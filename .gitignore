@@ -1,0 +1,8 @@
+/Results/
+/.idea/
+/.vscode/
+/browser/
+/log.html
+/output.xml
+/playwright-log.txt
+/report.html
