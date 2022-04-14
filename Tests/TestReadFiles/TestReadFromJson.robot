@@ -1,6 +1,5 @@
 *** Settings ***
 Library    OperatingSystem
-Library    RequestsLibrary
 
 *** Variables ***
 ${jsonFilePath}=    Resources/testJsonFile.json
