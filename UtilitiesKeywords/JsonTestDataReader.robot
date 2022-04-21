@@ -4,7 +4,7 @@ Load Test Data JSON File
     ${jsonFileContent}  Evaluate  json.load(open("${jsonFilePath}", "r"))    json
     [Return]    ${jsonFileContent}
 
-JSON Test Data
+Get JSON Test Data
     [Arguments]    ${jsonObjectAndPath}
     Set Global Variable    ${testData_gv}    ${jsonObjectAndPath}
     [Return]    ${testData_gv}

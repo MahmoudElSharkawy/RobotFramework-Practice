@@ -10,8 +10,8 @@ ${jsonFilePath}=    Resources/testJsonFile.json
 Read From Json File Example
     Log To Console    Hello, my name is ${testData["firstname"]} ${testData["lastname"]}
 
-    ${firstname}=    JSON Test Data    ${testData["firstname"]}
-    ${lastname}=     JSON Test Data    ${testData["lastname"]}
+    ${firstname}=    Get JSON Test Data    ${testData["firstname"]}
+    ${lastname}=     Get JSON Test Data    ${testData["lastname"]}
     Log To Console    Hello, my name is: ${firstname} ${lastname}
 
 *** Keywords ***
