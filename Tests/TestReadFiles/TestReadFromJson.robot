@@ -23,6 +23,10 @@ Read From Json File Example 2
     ${lastname2}=    Get Value From Json    ${testData2}    lastname
     Log To Console    Hello, my name is: ${firstname2} ${lastname2}
 
+    Set Test Variable    ${firstname3}    ${testData2["firstname"]}
+    Set Test Variable    ${lastname3}    ${testData2["lastname"]}
+    Log To Console    Hello, my name is: ${firstname3} ${lastname3}
+
 *** Keywords ***
 Setup
     ${testData}=    Load Test Data JSON File    ${jsonFilePath}
