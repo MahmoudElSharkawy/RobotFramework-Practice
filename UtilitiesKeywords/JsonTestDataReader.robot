@@ -1,7 +1,4 @@
 *** Keywords ***
-Set JSON File Path    ${jsonFilePath}
-    Set Global Variable    ${jsonFilePath}    ${jsonFilePath}
-
 Load Test Data JSON File
     [Arguments]    ${jsonFilePath}
     ${jsonFileContent}  Evaluate  json.load(open("${jsonFilePath}", "r"))    json
