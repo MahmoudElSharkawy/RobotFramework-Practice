@@ -1,13 +1,20 @@
 *** Settings ***
-Library    OperatingSystem
+Resource    ../../UtilitiesKeywords/JsonTestDataReader.robot
+
+Suite Setup    Setup
 
 *** Variables ***
 ${jsonFilePath}=    Resources/testJsonFile.json
 
 *** Test Cases ***
 Read From Json File Example
-    #${jsonFile}=    Get file    ${jsonFilePath}
-    #${object}=    Evaluate    json.loads('''${jsonFile}''')    json
-    ${object}  Evaluate  json.load(open("${jsonFilePath}", "r"))    json
+    Log To Console    Hello, my name is ${testData["firstname"]} ${testData["lastname"]}
 
-    Log To Console    Hello, my name is ${object["firstname"]} ${object["lastname"]}
+    ${firstname}=    JSON Test Data    ${testData["firstname"]}
+    ${lastname}=     JSON Test Data    ${testData["lastname"]}
+    Log To Console    Hello, my name is: ${firstname} ${lastname}
+
+*** Keywords ***
+Setup
+    ${testData}=    Load Test Data JSON File    Resources/testJsonFile.json
+    Set Suite Variable    ${testData}
