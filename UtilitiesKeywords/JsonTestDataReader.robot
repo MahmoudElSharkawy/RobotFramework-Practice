@@ -1,20 +1,19 @@
 *** Keywords ***
 Load Test Data JSON File
+    [Documentation]     
+    ...    **Use it like this in the Suite Setup keyword:**
+    ...    #Load Test Data JSON File    Resources/TestData/JSONs/testJsonFile.json
+    ...
+    ...    **Then use it like this in a Test Case:**
+    ...    #Log To Console    Hello, my name is: ${testData["firstname"]} ${testData["lastname"]}
+    ...
+    ...   **Or use it like this to store test data in a variable:**
+    ...    #Set Test Variable    ${firstname}    ${testData["firstname"]}
+    ...    #Set Test Variable    ${lastname}    ${testData["lastname"]}
+    ...    #Log To Console    Hello, my name is: ${firstname} ${lastname}
+    ...
+    ...    **We can get a value in an object tree like this:**
+    ...    #Log To Console    Hello, my name is: ${testData["user"]["firstname"]} ${testData["user"]["lastname"]}
     [Arguments]    ${jsonFilePath}
-    ${jsonFileContent}  Evaluate  json.load(open("${jsonFilePath}", "r"))    json
-    [Return]    ${jsonFileContent}
-
-Get JSON Test Data
-    [Arguments]    ${jsonObjectAndPath}
-    Set Global Variable    ${testData_gv}    ${jsonObjectAndPath}
-    [Return]    ${testData_gv}
-
-## Use it like this in the Suite Setup keyword
-#    ${testData}=    Load Test Data JSON File    Resources/testJsonFile.json
-#    Set Suite Variable    ${testData}
-## Then use it like this in a Test Case
-#    Log To Console    Hello, my name is: ${testData["firstname"]} ${testData["lastname"]}
-## Or user it like this to store test data in a variable
-#    ${firstname}=    JSON Test Data    ${testData["firstname"]}
-#    ${lastname}=     JSON Test Data    ${testData["lastname"]}
-#    Log To Console    Hello, my name is: ${firstname} ${lastname}
+    ${testData}  Evaluate  json.load(open("${jsonFilePath}", "r"))    json
+    Set Suite Variable    ${testData}
