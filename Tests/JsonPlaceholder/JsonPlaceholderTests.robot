@@ -1,6 +1,8 @@
 *** Settings ***                                                                                       
 Library    Collections                                                                                 
 Library    RequestsLibrary                                                                             
+Library    JSONLibrary
+Library    OperatingSystem
                                                                                                        
 Suite Setup    Create Session  jsonplaceholder  https://jsonplaceholder.typicode.com                   
                                                                                                        
@@ -21,6 +23,14 @@ Post Request Test
     #${response}=    POST On Session    jsonplaceholder  /posts  json=${data}  expected_status=anything
     ${createPostResponse}=    Create Post    Robotframework requests    This is a test!    1                                                                                             
     Status Should Be    201    ${createPostResponse}  
+
+Test List
+    ${response}=    GET On Session    jsonplaceholder    /todos
+    ${completedValueList}=    Get Value From Json    ${response.json()}    $[*].completed
+    FOR    ${value}    IN    @{completedValueList}
+        Log    ${value}
+        Run Keyword And Continue On Failure    Should Be Equal As Strings    ${value}    True
+    END
 
 *** Keywords ***
 Get Posts
