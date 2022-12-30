@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../UtilitiesKeywords/JsonTestDataReader.robot
+Resource    ../../Utilities/JsonTestDataReader.robot
 
 Suite Setup    Load Test Data JSON File    ${jsonFilePath}
 
