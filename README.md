@@ -1,5 +1,5 @@
 # RobotFramework-Practice
-Practicing [**Robot Framework**](https://robotframework.org/) using [**Browser Library**](https://marketsquare.github.io/robotframework-browser/Browser.html) for Web GUI Test Automation and [**Requests library**](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) for APIs Test Automation.
+Practicing [**Robot Framework**](https://robotframework.org/) using [**Browser Library**](https://marketsquare.github.io/robotframework-browser/Browser.html) for **Web GUI** Test Automation and [**Requests library**](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) for **APIs** Test Automation.
 
 ## **Project Design**:
 We are implementing the **Object Model** design pattern (**Page Object Model** for GUI). And below is the project structure folders:
