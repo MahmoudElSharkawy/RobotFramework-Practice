@@ -1,16 +1,16 @@
 *** Settings ***
 Library    Browser
 
-Resource    ../../Resources/GlobalVariables.robot
+Resource    ../../../Resources/GlobalVariables.robot
 
 *** Variables ***
 ${url}    ${phptravelsAdminBaseUrl}
 
-${email_textField}        xpath=//input[@name='email' and @type='text']
-${password_textField}     xpath=//input[@name='password']
-${login_button}           xpath=//button[contains(.,'Login')]
-${errorMessageHoldOn_text}      xpath=//div[@class='resultlogin' and contains(.,'Hold On...')]
-${errorMessage_text}      xpath=//div[@class='resultlogin' and contains(.,'Invalid')]
+${email_textField}                xpath=//input[@name='email' and @type='text']
+${password_textField}             xpath=//input[@name='password']
+${login_button}                   xpath=//button[contains(.,'Login')]
+${errorMessageHoldOn_text}        xpath=//div[@class='resultlogin' and contains(.,'Hold On...')]
+${errorMessage_text}              xpath=//div[@class='resultlogin' and contains(.,'Invalid')]
 
 *** Keywords ***
 Navigate To Admin Login Page
@@ -25,6 +25,6 @@ Admin User Login
 Assert On Login Error Message
     [Arguments]    ${expectedErrorMessage}
     Wait For Elements State    ${errorMessageHoldOn_text}   hidden 
-    #Get Text    ${errorMessage_text}    ${expectedErrorMessage}
+    Get Text    ${errorMessage_text}  ==  ${expectedErrorMessage}
     ${errorMessageText}=     Get Text    ${errorMessage_text}
     Should Be Equal    ${errorMessageText}    ${expectedErrorMessage}

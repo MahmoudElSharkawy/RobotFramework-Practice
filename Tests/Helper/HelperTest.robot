@@ -1,5 +1,5 @@
 *** Settings ***
-Library    ../../UtilitiesKeywords/Helper.py
+Library    ../../Utilities/Helper.py
 
 *** Test Cases ***
 Test

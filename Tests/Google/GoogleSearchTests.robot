@@ -1,8 +1,8 @@
 *** Settings ***
 Library    Browser
 
-Resource    ../../UtilitiesKeywords/BrowserFactory.robot
-Resource    ../../Pages/Google/GooglePage.robot
+Resource    ../../Utilities/BrowserFactory.robot
+Resource    ../../Object Models/Pages/Google/GooglePage.robot
 
 Suite Setup    Setup
 Suite Teardown    Close Browser
@@ -24,5 +24,5 @@ Google Search Test 2
 
 *** Keywords ***
 Setup
-    Open New Browser
+    Initialize New Browser
     Navigate To Google Home Page

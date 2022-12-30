@@ -1,7 +1,7 @@
 *** Settings ***
 Library    Browser
 
-Resource    ../../Resources/GlobalVariables.robot
+Resource    ../../../Resources/GlobalVariables.robot
 
 *** Variables ***
 ${url}    ${googleBaseUrl}

@@ -1,9 +1,9 @@
 *** Settings ***
 Library    Browser
 
-Resource    ../../UtilitiesKeywords/BrowserFactory.robot
-Resource    ../../Pages/PHPTRAVELS/AdminLoginPage.robot
-Resource    ../../Pages/PHPTRAVELS/DashboardPage.robot
+Resource    ../../Utilities/BrowserFactory.robot
+Resource    ../../Object Models/Pages/PHPTRAVELS/AdminLoginPage.robot
+Resource    ../../Object Models/Pages/PHPTRAVELS/DashboardPage.robot
 
 Test Setup    Setup
 Test Teardown    Close Browser
@@ -25,5 +25,5 @@ Test Invalid Admin User Login With Wrong Credentials
 
 *** Keywords ***
 Setup
-    Open New Browser
+    Initialize New Browser
     Navigate To Admin Login Page
