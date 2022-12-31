@@ -14,6 +14,7 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 3. Open a terminal/commandline windows and **Install Robot Framework** from PyPi with pip: ```pip install robotframework```
 4. Install [**Browser Library**](https://marketsquare.github.io/robotframework-browser/Browser.html): ```pip install robotframework-browser``` then initialize it: ```rfbrowser init```. If rfbrowser is not found/installed for any reason, try ```python -m Browser.entry init``` 
 5. Install [**Requests library**](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html): ```pip install robotframework-requests```
+Install [**JSON Library**](https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html): ```pip install robotframework-jsonlibrary```
 6. Install [**Pabot**](https://pabot.org/) to be able to perform **Parallel execution** when needed: ```pip install -U robotframework-pabot```
 7. Install [**VS Code IDE**](https://code.visualstudio.com/download) and install **Robot Framework Language Server** and **Material Icon Theme** plugins on it
 
