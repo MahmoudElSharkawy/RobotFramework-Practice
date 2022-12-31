@@ -26,7 +26,7 @@ Post Request Test
 
 Test List
     ${response}=    GET On Session    jsonplaceholder    /todos
-    ${completedValueList}=    Get Value From Json    ${response.json()}    $[*].completed
+    ${completedValueList}=    Get Value From Json    ${response.json()}    $[?(@.completed==true)].completed
     FOR    ${value}    IN    @{completedValueList}
         Log    ${value}
         Run Keyword And Continue On Failure    Should Be Equal As Strings    ${value}    True
