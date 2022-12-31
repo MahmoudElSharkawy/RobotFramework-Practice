@@ -1,7 +1,8 @@
 *** Settings ***
 Resource    ../../Object Models/APIs/Restful-Booker/ApisBooking.robot
-Resource    ../../Object Models/APIs/Restful-Booker/Apis.robot
+Resource    ../../Object Models/APIs/Restful-Booker/ApisUserManagement.robot
 Resource    ../../Utilities/Helper.robot
+Resource    ../../Object Models/APIs/Apis.robot
 
 Suite Setup    Setup
 

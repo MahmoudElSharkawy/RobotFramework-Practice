@@ -1,7 +1,7 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    JSONLibrary
-Resource    Apis.robot
+Resource    ../Apis.robot
 
 *** Variables ***
 ${booking_serviceName}    /booking
