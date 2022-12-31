@@ -14,7 +14,7 @@ Google Search Test 1
     [Documentation]    Google Search for Robot Framework Browser Library and check the first search result
     [Tags]    testcaseid    bugid    Smoke    Regression    Positive
     Google Search    Robot Framework Browser Library
-    Assert On First Search Result Text    Robot Framework Browser library
+    Assert On First Search Result Text    Browser Library
     
 Google Search Test 2
     [Documentation]    Google Search for Robot Framework SeleniumLibrary and check the first search result
