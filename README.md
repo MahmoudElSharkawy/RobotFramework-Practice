@@ -5,7 +5,7 @@ Practicing [**Robot Framework**](https://robotframework.org/) using [**Browser L
 We are implementing the **Object Model** design pattern (**Page Object Model** for GUI). And below is the project structure folders:
 * **Object Models** folder: Includes the **APIs** clustered by the services and **GUI Pages** 
 * **Tests** folder: Includes all of our **Test Suites** and **Test Cases** 
-* **Resources** folder: Includes any other files that aren't keywords/code/actions like **Global Variables**, **Test Data** files, etc...
+* **Resources** folder: Includes any other files that aren't keywords/code/actions like **Global Variables**, **Configurations**, **Test Data** files, etc...
 * **Utilities** folder: Includes the common global utility keywords/code/actions to be used in other folders, mainly the Object Models and Tests
 
 ## Setup:

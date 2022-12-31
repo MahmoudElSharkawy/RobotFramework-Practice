@@ -1,7 +1,7 @@
 *** Settings ***
 Library    Browser
 
-Resource    ../../../Resources/GlobalVariables.resource
+Resource    ../../../Resources/Configurations/Environments.resource
 
 *** Variables ***
 ${url}    ${googleBaseUrl}
