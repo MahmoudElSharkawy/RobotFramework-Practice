@@ -13,3 +13,5 @@ ${phptravelsPassword}        demoadmin
 
 # Restful-Booker
 ${restfulBookerBaseUrl}    https://restful-booker.herokuapp.com
+${restfulBookerUsername}    admin
+${restfulBookerPassword}    password123

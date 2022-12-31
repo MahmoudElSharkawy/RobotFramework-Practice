@@ -1,3 +1,6 @@
+*** Comments ***
+This class have all the common keywords that will be used in Tests and/or Object Models files
+
 *** Settings ***
 Library    RequestsLibrary
 Library    JSONLibrary
@@ -8,7 +11,7 @@ Resource    ../../../Resources/Configurations/Environments.resource
 ${login_serviceName}    /auth
 
 *** Keywords ***
-Login
+User Login
     [Arguments]    ${username}    ${password}
     ## Get the access token
     ${jsonBody}=    Create dictionary    username=${username}    password=${password} 
@@ -19,5 +22,12 @@ Login
     # ${accessToken}=    ${accessToken}[0]
     
     ## Set the access token as a session header to be set automatically with all the coming requests using the same alias (restfulBooker)
-    ${headers}=    Create dictionary    Content-Type=application/json    Authorization=Basic ${accessToken}    #Cookie=token=${accessToken}
+    ${headers}=    Create dictionary    Content-Type=application/json    Cookie=token=${accessToken}    #Authorization=Basic ${accessToken}
     Create Session    restfulBooker   ${restfulBookerBaseUrl}    headers=${headers}
+
+Admin User Login
+    User Login    ${restfulBookerUsername}    ${restfulBookerPassword}
+
+Validate That Response Body Contains Value    
+    [Arguments]    ${response}    ${expectedValue}
+    Should Contain    ${response.text}    ${expectedValue}
