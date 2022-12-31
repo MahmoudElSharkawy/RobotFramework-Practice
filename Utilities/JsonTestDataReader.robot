@@ -15,5 +15,5 @@ Load Test Data JSON File
     ...    **We can get a value in an object tree like this:**
     ...    #Log To Console    Hello, my name is: ${testData["user"]["firstname"]} ${testData["user"]["lastname"]}
     [Arguments]    ${jsonFilePath}
-    ${testData}  Evaluate  json.load(open("${jsonFilePath}", encoding="utf8"))    json
+    ${testData}  Evaluate  json.load(open("Resources/TestDataFiles/JSONs/${jsonFilePath}", encoding="utf8"))    json
     Set Suite Variable    ${testData}

@@ -4,7 +4,7 @@ Resource    ../../Utilities/JsonTestDataReader.robot
 Suite Setup    Load Test Data JSON File    ${jsonFilePath}
 
 *** Variables ***
-${jsonFilePath}=    Resources/testJsonFile.json
+${jsonFilePath}=    testJsonFile.json
 
 *** Test Cases ***
 Read From Json File Example
