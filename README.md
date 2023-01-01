@@ -20,5 +20,5 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 
 ## Execution:
 * To execute all the test cases please run the following command from the terminal/commandline: ```robot -d Results Tests``` 
-* And we can change variables like this to run on Firefox with headelss mode  ```robot -v browserType:firefox -v headless:True -d Results Tests```
+* And we can change variables like this to run on Firefox with headless mode  ```robot -v browserType:firefox -v headless:True -d Results Tests```
 * We can perform **Parallel Execution** with the ```pabot``` instead of ```robot``` command like this: ```pabot -d Results Tests```
