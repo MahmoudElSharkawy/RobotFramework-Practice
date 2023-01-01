@@ -15,3 +15,6 @@ ${phptravelsPassword}        demoadmin
 ${restfulBookerBaseUrl}    https://restful-booker.herokuapp.com
 ${restfulBookerUsername}    admin
 ${restfulBookerPassword}    password123
+
+# Automation Exercise
+${automationExerciseBaseUrl}    https://automationexercise.com
