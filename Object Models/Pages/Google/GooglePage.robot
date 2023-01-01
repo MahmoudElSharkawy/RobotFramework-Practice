@@ -7,9 +7,14 @@ Resource    ../../../Resources/Configurations/Environments.resource
 ${url}    ${googleBaseUrl}
 
 ${searchBat_textField}    xpath=//*[@name='q']
-${firstSearchResult_h3}   xpath=(//h3[contains(@class,'LC20lb')])[1]
+# ${firstSearchResult_h3}   xpath=(//h3[contains(@class,'LC20lb')])[1]
 
 *** Keywords ***
+Get Search Option Locator
+    [Arguments]    ${index}
+    ${locator}    Set Variable    xpath=(//h3[contains(@class,'LC20lb')])[${index}]
+    [return]    ${locator} 
+    
 Navigate To Google Home Page
     New Page       ${url}
 
@@ -18,6 +23,7 @@ Google Search
     Type Text    ${searchBat_textField}    ${query}
     Keyboard Key    press    Enter 
 
-Assert On First Search Result Text
-    [Arguments]   ${ExpectedText}
-    Get Text    ${firstSearchResult_h3}    ==    ${ExpectedText}
+Assert On Search Result Text
+    [Arguments]   ${index}    ${ExpectedText}
+    ${searchResultLocator}=    Get Search Option Locator    1
+    Get Text    ${searchResultLocator}    ==    ${ExpectedText}
