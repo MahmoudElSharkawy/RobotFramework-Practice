@@ -2,7 +2,7 @@
 Load Test Data JSON File
     [Documentation]     
     ...    **Use it like this in the Suite Setup keyword:**
-    ...    #Load Test Data JSON File    Resources/TestData/JSONs/testJsonFile.json
+    ...    #Load Test Data JSON File    testJsonFile.json
     ...
     ...    **Then use it like this in a Test Case:**
     ...    #Log To Console    Hello, my name is: ${testData["firstname"]} ${testData["lastname"]}

@@ -1,0 +1,11 @@
+{
+    "searchQuery":{
+        "browserLibrary": "Robot Framework Browser Library",
+        "seleniumLibrary": "Robot Framework SeleniumLibrary"
+    },
+    "index": "1",
+    "Expected":{
+        "browserLibrary": "Browser Library",
+        "seleniumLibrary": "SeleniumLibrary - Robot Framework"
+    }
+}
