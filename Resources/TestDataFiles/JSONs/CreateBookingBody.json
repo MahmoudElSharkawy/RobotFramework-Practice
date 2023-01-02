@@ -1,0 +1,11 @@
+{
+    "firstname" : "Mahmoud",
+    "lastname" : "ElSharkawy",
+    "totalprice" : 111,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2023-01-01",
+        "checkout" : "2024-01-01"
+    },
+    "additionalneeds" : "Cream Caramel"
+}

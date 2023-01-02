@@ -7,9 +7,13 @@ Resource    ../../Object Models/APIs/Apis.robot
 Suite Setup    Setup
 
 *** Test Cases ***
-Test Create Booking
+Test Create Booking 1
     Create Booking    Mahmoud_Create${currentTime}    ElSharkawy    1000000    true    2023-01-01    2024-01-01    Cream Caramel
     Validate That The Booking is Created    Mahmoud_Create${currentTime}    ElSharkawy
+
+Test Create Booking 2
+    ${createResponse}=    Create Booking with Body as JSON File    /Resources/TestDataFiles/JSONs/CreateBookingBody.json
+    Validate Response JSON Value    ${createResponse}    $.booking.lastname    ElSharkawy
 
 Test Delete Booking
     [Setup]    Create Booking    Mahmoud_Delete${currentTime}    ElSharkawy    1000000    true    2023-01-01    2024-01-01    Cream Caramel

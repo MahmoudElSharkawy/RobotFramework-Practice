@@ -14,6 +14,12 @@ Create Booking
     ${response}=    POST On Session    restfulBooker    ${booking_serviceName}    json=${jsonBody}
     [Return]    ${response}
 
+Create Booking with Body as JSON File
+    [Arguments]    ${filePath}
+    ${jsonBody}=    Load Json From File    ${EXECDIR}${filePath}
+    ${response}=    POST On Session    restfulBooker    ${booking_serviceName}    json=${jsonBody}
+    [Return]    ${response}
+
 Get Booking Ids
     [Arguments]    ${firstName}    ${lastName}
     ${queryParams}=    Create Dictionary    firstname=${firstName}    lastname=${lastName}
